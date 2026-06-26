@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Hello PHP</title>
 </head>
 <body>
-    <h1>
-        <?php
-            echo "Hello PHP";
+    <h1>Recommended Books</h1>
+        <?php 
+        $books = [
+            'Do Androids Dream of Electric Sheep?',
+            'The langoliers',
+            'Hail Mary',
+        ];
         ?>
-    </h1>
+    <ul>
+        <?php foreach ($books as $book): ?>
+            <li><?= $book ?></li>
+        <?php endforeach; ?>
+        <!-- <li>Do Androids Dream of Electric Sheep?</li>
+        <li>The langoliers</li>
+        <li>Hail Mary</li> -->
+    </ul>
 </body>
 </html>
