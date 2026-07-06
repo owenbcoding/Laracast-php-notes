@@ -9,5 +9,13 @@
 
   // Generic Local LLM patterns (some extensions use these keys)
   "localAI.serverUrl": "http://localhost:11434",
-  "localAI.model": "qwen2.5-coder:7b"
+  "localAI.model": "qwen2.5-coder:7b",
+
+  // Disable auto-complete to focus on active learning
+  "editor.inlineSuggest.enabled": false,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  }
 }
