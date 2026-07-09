@@ -6,20 +6,16 @@
 </head>
 <body>
     <h1>Recommended Books</h1>
-        <?php 
-        $books = [
-            'Do Androids Dream of Electric Sheep?',
-            'The langoliers',
-            'Hail Mary',
-        ];
-        ?>
-    <ul>
-        <?php foreach ($books as $book): ?>
-            <li><?= $book ?></li>
-        <?php endforeach; ?>
-        <!-- <li>Do Androids Dream of Electric Sheep?</li>
-        <li>The langoliers</li>
-        <li>Hail Mary</li> -->
-    </ul>
+    <?php 
+    $business = [
+        "The Lean Startup" => "Eric Ries",
+        "Zero to One" => "Peter Thiel",
+        "Good to Great" => "Jim Collins"
+    ];
+
+    foreach  ($business['category'] as $book => $author) {
+        echo "<p>$book by $author</p>";
+    }
+    ?>
 </body>
 </html>
