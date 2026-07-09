@@ -62,6 +62,69 @@
 
 ---
 
+## 09 — Page Links
+- Build a simple navigation array once and render links from it
+- Avoid hardcoding repeated `<a>` tags on every page
+- Keep shared nav data in one place when possible
+
+---
+
+## 10 — PHP Partials
+- Partials are reusable template fragments (for example: nav, footer)
+- Use `require`/`include` to compose pages from smaller view files
+- Shared layout pieces should live in dedicated partial files
+
+---
+
+## 11 — Superglobals and Current Page Styling
+- Superglobals like `$_SERVER` are always available
+- `$_SERVER['REQUEST_URI']` helps detect the current page
+- Conditionally add an `active` class for current-nav highlighting
+
+---
+
+## 12 — Make a PHP Router
+- Route by reading the request path and mapping it to a file
+- Keep route matching logic centralized
+- Return a simple 404 response for unknown routes
+
+---
+
+## 13 — Create a MySQL Database
+- Define a schema first (tables, columns, constraints)
+- Choose proper types and keys early to avoid painful migrations
+- Verify inserts/selects manually before app integration
+
+---
+
+## 14 — PDO First Steps
+- Use PDO to connect to MySQL from PHP
+- Set `PDO::ATTR_ERRMODE` to `PDO::ERRMODE_EXCEPTION`
+- Use prepared statements instead of manual string interpolation
+
+---
+
+## 15 — Extract a PHP Database Class
+- Wrap raw PDO usage in a small database class
+- Keep query logic in one place to reduce duplication
+- Return plain arrays first; add richer abstractions later
+
+---
+
+## 16 — Environments and Configuration Flexibility
+- Keep credentials in environment/config files, not inline in code
+- Load configuration once and inject where needed
+- Separate local/dev/prod values cleanly
+
+---
+
+## 17 — SQL Injection Vulnerabilities and Prepared Statements
+- SQL injection happens when user input is concatenated into queries
+- Parameter binding protects query structure from malicious input
+- Validate inputs and always prefer prepared statements
+
+---
+
 ## Gotchas / Things to Remember
 - 
 
